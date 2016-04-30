@@ -5,25 +5,25 @@ import (
 	"golang.org/x/net/context"
 )
 
-//LDAP struct
-type LDAP struct{}
+//Subscription struct
+type Subscription struct{}
 
 //Create ...
-func (p *LDAP) Create(ctx context.Context, req *api.Request,
+func (p *Subscription) Create(ctx context.Context, req *api.Request,
 	res *api.Response) error {
 
 	return nil
 }
 
 //Update ...
-func (p *LDAP) Update(ctx context.Context, req *api.Request,
+func (p *Subscription) Update(ctx context.Context, req *api.Request,
 	res *api.Response) error {
 
 	return nil
 }
 
 //Read ...
-func (p *LDAP) Read(ctx context.Context, req *api.Request,
+func (p *Subscription) Read(ctx context.Context, req *api.Request,
 	res *api.Response) error {
 	//TODO Implement
 	res.StatusCode = 200 //FIXME: use HTTP status code from the htp package
@@ -32,7 +32,7 @@ func (p *LDAP) Read(ctx context.Context, req *api.Request,
 }
 
 //Delete ...
-func (p *LDAP) Delete(ctx context.Context, req *api.Request,
+func (p *Subscription) Delete(ctx context.Context, req *api.Request,
 	res *api.Response) error {
 
 	return nil

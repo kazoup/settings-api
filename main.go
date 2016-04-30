@@ -41,7 +41,27 @@ func main() {
 	//Register network credentials settings handler
 	//http://localhost:8080/v2/settings/ldap/{create,update,read,delete}
 	service.Server().Handle(
-		service.Server().NewHandler(new(handler.Ldap)),
+		service.Server().NewHandler(new(handler.LDAP)),
+	)
+	//Register logs retention settings handler
+	//http://localhost:8080/v2/settings/logs/{create,update,read,delete}
+	service.Server().Handle(
+		service.Server().NewHandler(new(handler.Logs)),
+	)
+	//Register email settings handler
+	//http://localhost:8080/v2/settings/smtp/{create,update,read,delete}
+	service.Server().Handle(
+		service.Server().NewHandler(new(handler.SMTP)),
+	)
+	//Register datasource settings handler
+	//http://localhost:8080/v2/settings/datasource/{create,update,read,delete}
+	service.Server().Handle(
+		service.Server().NewHandler(new(handler.DataSource)),
+	)
+	//Register policy settings handler
+	//http://localhost:8080/v2/settings/policy/{create,update,read,search,delete}
+	service.Server().Handle(
+		service.Server().NewHandler(new(handler.Policy)),
 	)
 	if err := service.Run(); err != nil {
 		log.Fatal(err)
