@@ -14,7 +14,8 @@ Settings API is to be used behind Micro API gateway.
 	$ consul agent -server -bootstrap-expect 1 -data-dir /tmp/consul
 	```
 3. Quick run
-  ```shell
+
+	```
 	go run main.go
 	```
 4. Download and start the service
