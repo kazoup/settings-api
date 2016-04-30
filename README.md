@@ -2,6 +2,15 @@
 
 Settings API is to be used behind Micro API gateway.
 
+API    | ENDPOINT
+------- ---------
+Public | /v2/settings/public/{create,update,read,delete}
+Hostname | /v2/settings/hostname/{create,update,read,delete}
+SmbUser | /v2/settings/smbuser/{create,update,read,delete}
+CloudStorage | /v2/settings/cloudstorage/{create,update,read,delete}
+LDAP | /v2/settings/ldap/{create,update,read,delete}
+
+
 ## Getting started
 
 1. Install Consul
