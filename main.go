@@ -58,10 +58,15 @@ func main() {
 	service.Server().Handle(
 		service.Server().NewHandler(new(handler.DataSource)),
 	)
-	//Register policy settings handler
+	//Register ive archpolicy settings handler
 	//http://localhost:8080/v2/settings/policy/{create,update,read,search,delete}
 	service.Server().Handle(
 		service.Server().NewHandler(new(handler.Policy)),
+	)
+	//Register users settings handler
+	//http://localhost:8080/v2/settings/user/{create,update,read,search,delete}
+	service.Server().Handle(
+		service.Server().NewHandler(new(handler.User)),
 	)
 	if err := service.Run(); err != nil {
 		log.Fatal(err)
