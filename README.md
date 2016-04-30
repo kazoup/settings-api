@@ -22,7 +22,7 @@ Settings API is to be used behind Micro API gateway.
 
 	```shell
 	go get github.com/kazoup/settings-api
-	message-api
+	settings-api
 	```
 
 	OR as a docker container
