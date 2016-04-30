@@ -68,6 +68,16 @@ func main() {
 	service.Server().Handle(
 		service.Server().NewHandler(new(handler.User)),
 	)
+	//Register backup handler
+	//http://localhost:8080/v2/settings/backup/{create,export,read,search,delete}
+	service.Server().Handle(
+		service.Server().NewHandler(new(handler.Backup)),
+	)
+	//Register restore handler
+	//http://localhost:8080/v2/settings/backup/{create,export,read,search,delete}
+	service.Server().Handle(
+		service.Server().NewHandler(new(handler.Restore)),
+	)
 	if err := service.Run(); err != nil {
 		log.Fatal(err)
 	}

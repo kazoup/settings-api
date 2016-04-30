@@ -15,6 +15,8 @@ Subscription | /v2/settings/subscription/{create,update,read,delete}
 DataSource | /v2/settings/datasource/{create,update,read,search,discover,delete}
 Policy | /v2/settings/policy/{create,update,read,search,delete}
 User | /v2/settings/user/{create,update,read,search,delete}
+Backup | /v2/settings/backup/{create,export,read,search,delete}
+Restore | /v2/settings/restore/{step1,step2,step3,step4,fromfile}
 
 ## Getting started
 
