@@ -3,7 +3,7 @@
 Settings API is to be used behind Micro API gateway.
 
 API    | ENDPOINT
-------- ---------
+-------|---------
 Public | /v2/settings/public/{create,update,read,delete}
 Hostname | /v2/settings/hostname/{create,update,read,delete}
 SmbUser | /v2/settings/smbuser/{create,update,read,delete}
