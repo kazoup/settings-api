@@ -1,4 +1,4 @@
-# Settings API [![Circle CI](https://circleci.com/gh/kazoup/settings-api.svg?style=svg)](https://circleci.com/gh/kazoup/settings-api)[![Go Report Card](https://goreportcard.com/badge/github.com/kazoup/settings-api)](https://goreportcard.com/report/github.com/kazoup/settings-api)
+# Settings API [![Circle CI](https://circleci.com/gh/kazoup/settings-api.svg?style=svg)](https://circleci.com/gh/kazoup/settings-api) [![Go Report Card](https://goreportcard.com/badge/github.com/kazoup/settings-api)](https://goreportcard.com/report/github.com/kazoup/settings-api)
 
 Settings API is to be used behind Micro API gateway.
 
