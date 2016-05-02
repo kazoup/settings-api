@@ -31,7 +31,7 @@ func (p *Policy) Read(ctx context.Context, req *api.Request,
 	return nil
 }
 
-//Read ...
+//Search ...
 func (p *Policy) Search(ctx context.Context, req *api.Request,
 	res *api.Response) error {
 	//TODO Implement
