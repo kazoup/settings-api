@@ -1,3 +1,4 @@
+/*settings-api implements Kazoup go-micro API for appliance configuartion */
 package main
 
 import (
