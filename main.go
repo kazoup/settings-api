@@ -4,7 +4,6 @@ package main
 import (
 	"log"
 	"time"
-
 	"github.com/kazoup/settings-api/handler"
 	"github.com/micro/go-micro"
 )
@@ -17,6 +16,7 @@ func main() {
 		micro.RegisterTTL(time.Minute),
 		micro.RegisterInterval(time.Second*30),
 	)
+
 	//Init service
 	service.Init()
 	//Register public settings handler

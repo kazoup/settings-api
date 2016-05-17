@@ -3,6 +3,7 @@ package handler
 import (
 	"github.com/micro/micro/api/proto"
 	"golang.org/x/net/context"
+	"net/http"
 )
 
 //Public struct
@@ -26,8 +27,23 @@ func (p *Public) Update(ctx context.Context, req *api.Request,
 func (p *Public) Read(ctx context.Context, req *api.Request,
 	res *api.Response) error {
 	//TODO Implement
-	res.StatusCode = 200 //FIXME: use HTTP status code from the htp package
-	res.Body = "TODO"
+
+	//START MOCK
+	res.StatusCode = http.StatusOK
+
+	/* Expects JSON obj:
+	{
+	  "APPLIANCE_IS_REGISTERED": bool,
+	  "APPLIANCE_IS_CONFIGURED": bool,
+	  "APPLIANCE_IS_DEMO": bool,
+	  "GIT_COMMIT_STRING": string,
+	  "SMB_USER_EXISTS": bool
+	}
+	*/
+	rp := &ResponsePublic{}
+	res.Body = rp.GetResponse()
+	//END MOCK
+
 	return nil
 }
 
