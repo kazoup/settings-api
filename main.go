@@ -3,6 +3,7 @@ package main
 
 import (
 	"github.com/kazoup/settings-api/handler"
+	"github.com/kazoup/settings-api/wrapper"
 	"github.com/micro/go-micro"
 	"log"
 	"time"
@@ -13,6 +14,7 @@ func main() {
 	service := micro.NewService(
 		//TODO change namespace to com.kazoup.api
 		micro.Name("go.micro.api.v2.settings"),
+		micro.WrapHandler(wrapper.ValidateUser),
 		micro.RegisterTTL(time.Minute),
 		micro.RegisterInterval(time.Second*30),
 	)
