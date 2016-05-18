@@ -19,6 +19,7 @@ type intercom struct {
 	Company       company `json:"company"`
 }
 
+// ResponseUser ...
 type ResponseUser struct {
 	Url        string   `json:"url"`
 	Id         int64    `json:"id"`
@@ -32,6 +33,7 @@ type ResponseUser struct {
 	Intercom   intercom `json:"intercom"`
 }
 
+// GetResponse ...
 func (r *ResponseUser) GetResponse() string {
 	ru := ResponseUser{
 		Url:        "https://kazoup.com/api/v1/users/2/",
@@ -57,7 +59,6 @@ func (r *ResponseUser) GetResponse() string {
 				Name:        "Kazoup",
 			},
 		},
-
 	}
 
 	b, _ := json.Marshal(ru)
