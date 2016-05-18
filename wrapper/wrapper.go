@@ -5,14 +5,23 @@ import (
 	"github.com/micro/go-micro/metadata"
 	"github.com/micro/go-micro/server"
 	"golang.org/x/net/context"
+	"strings"
 )
 
-// Validates user token
+// ValidateUser validates user token
 func ValidateUser(fn server.HandlerFunc) server.HandlerFunc {
 	return func(ctx context.Context, req server.Request, rsp interface{}) error {
 		// TODO: implement token validation.
 
 		//START MOCK
+		f := fn(ctx, req, rsp)
+
+		// Avoid validation for Public.XXX
+		// Would be nice to have wrapper by handler instead of by service
+		if strings.Contains(req.Method(), "Public") {
+			return f
+		}
+
 		md, ok := metadata.FromContext(ctx)
 
 		if !ok {
@@ -20,7 +29,7 @@ func ValidateUser(fn server.HandlerFunc) server.HandlerFunc {
 		}
 
 		if len(md["Authorization"]) > 0 {
-			return fn(ctx, req, rsp)
+			return f
 		} else {
 			return errors.Unauthorized("xx.yy.auth.wrapper", "Invalid token")
 		}

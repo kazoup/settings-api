@@ -4,7 +4,7 @@ import "encoding/json"
 
 // ResponsePublic ...
 type ResponsePublic struct {
-	ApplianceIsRegistered bool   `json:"ApplianceIsRegistered"`
+	ApplianceIsRegistered bool   `json:"APPLIANCE_IS_REGISTERED"`
 	ApplianceIsConfigured bool   `json:"APPLIANCE_IS_CONFIGURED"`
 	ApplianceIsDemo       bool   `json:"APPLIANCE_IS_DEMO"`
 	GitCommitString       string `json:"GIT_COMMIT_STRING"`
