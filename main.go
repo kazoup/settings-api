@@ -2,10 +2,10 @@
 package main
 
 import (
-	"log"
-	"time"
 	"github.com/kazoup/settings-api/handler"
 	"github.com/micro/go-micro"
+	"log"
+	"time"
 )
 
 func main() {
