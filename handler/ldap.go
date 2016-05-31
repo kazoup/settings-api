@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"github.com/micro/micro/api/proto"
+	api "github.com/micro/micro/api/proto"
 	"golang.org/x/net/context"
 )
 

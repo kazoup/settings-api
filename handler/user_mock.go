@@ -5,13 +5,13 @@ import "encoding/json"
 type company struct {
 	Plan        string `json:"plan"`
 	PlanStarted int64  `json:"plan_started"`
-	Id          int64  `json:"id"`
+	ID          int64  `json:"id"`
 	Name        string `json:"name"`
 }
 
 type intercom struct {
 	CreatedAt     int64   `json:"created_at"`
-	AppId         string  `json:"app_id"`
+	AppID         string  `json:"app_id"`
 	ApplianceUUID string  `json:"Appliance UUID"`
 	Build         string  `json:"Build"`
 	Email         string  `json:"email"`
@@ -21,8 +21,8 @@ type intercom struct {
 
 // ResponseUser ...
 type ResponseUser struct {
-	Url        string   `json:"url"`
-	Id         int64    `json:"id"`
+	URL        string   `json:"url"`
+	ID         int64    `json:"id"`
 	UserName   string   `json:"username"`
 	GroupName  string   `json:"group_name"`
 	LastLogin  string   `json:"last_login"`
@@ -36,8 +36,8 @@ type ResponseUser struct {
 // GetResponse ...
 func (r *ResponseUser) GetResponse() string {
 	ru := ResponseUser{
-		Url:        "https://kazoup.com/api/v1/users/2/",
-		Id:         2,
+		URL:        "https://kazoup.com/api/v1/users/2/",
+		ID:         2,
 		UserName:   "pablo.aguirre@kazoup.com",
 		GroupName:  "admin",
 		LastLogin:  "2015-12-16T15:52:32.276907Z",
@@ -47,7 +47,7 @@ func (r *ResponseUser) GetResponse() string {
 		Updated:    "2016-05-17T13:20:22.981312Z",
 		Intercom: intercom{
 			CreatedAt:     1450281152,
-			AppId:         "udh2t9k4",
+			AppID:         "udh2t9k4",
 			ApplianceUUID: "a7d91565-f99c-4f4f-a396-e7ff6ae082b6",
 			Build:         "Build f054e71e2f - 2016-05-16 21:53:08",
 			Email:         "pablo.aguirre@kazoup.com",
@@ -55,7 +55,7 @@ func (r *ResponseUser) GetResponse() string {
 			Company: company{
 				Plan:        "Business",
 				PlanStarted: 1452164082,
-				Id:          1,
+				ID:          1,
 				Name:        "Kazoup",
 			},
 		},
